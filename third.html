@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="third.css">
+</head>
+<body>
+        <header>
+      <img src="images/063b0092354d3ae2148d69c697fa69cc3ef15567.png" alt="" />
+      <div>
+        <nav>
+          <a href="">Home</a>
+          <a href="">Pricing</a>
+          <a href="">Documentation</a>
+          <a href="">About Us</a>
+          <a href="">Case Study</a>
+        </nav>
+        <div>
+          <button>Sign In</button>
+          <button>Get Started</button>
+        </div>
+      </div>
+    </header>
+    <aside>
+        <div>
+            <p>Getting Started</p>
+            <nav>
+                <a href="">Overview</a>
+                <a href="">Authentication</a>
+            </nav>
+        </div>
+        <div>
+            <p>API ENDPOINTS</p>
+            <nav>
+                <a href="">Generate KYC Link</a>
+                <a href="">Retrieve User Data</a>
+                <a href="">Get User Data</a>
+                <a href="">List Verifications</a>
+                <a href="">BVN Verification</a>
+                <a href="">NIN Verification</a>
+                <a href="">Identity Verification</a>
+                <a href="">Address Verification</a>
+                <a href="">OCR API</a>
+            </nav>
+        </div>
+        <div>
+            <p>Additional Info</p>
+            <nav>
+                <a href="">Callback Handling</a>
+                <a href="">Error Handling</a>
+                <a href="">Error Handling</a>
+            </nav>
+        </div>
+    </aside>
+    <main>
+        <article>
+            <h2>Veriglobe API Documentation</h2>
+            <div>
+                <small><img src="" alt="">Getting Started</small>
+                <p>This documentation will help you integrate Veriglobe's identity verification services into your application. If you need any assistance, please contact our support team.</p>
+            </div>
+            <p>
+                The Veriglobe API provides a comprehensive suite of identity verification services, allowing developers to integrate KYC (Know Your Customer) functionality into their applications.
+                <br>
+Our API enables you to verify various forms of identification including Bank Verification Numbers (BVN), National Identification Numbers (NIN), identity documents, and address information.
+            </p>
+            <section>
+                <div>
+                    <div><img src="" alt=""><p>Generate KYC Link</p></div>
+                    <p>Create a verification session and get a link for your customers to complete verification.</p>
+                </div>
+                <div>
+                    <div><img src="" alt=""><p>Retrieve User Data</p></div>
+                    <p>Access comprehensive verification data for your customers after they complete the process.</p>
+                </div>
+                <div>
+                    <div><img src="" alt=""><p>List Verifications</p></div>
+                    <p>View all verification sessions for your projects and track their status.
+Base</p>
+                </div>
+            </section>
+        </article>
+        <article>
+            <h3>Base URL</h3>
+            <section>
+                <div>
+                    <ol>
+                        <li>https://api.veriglobe.net</li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>API Flow</h3>
+                    <ol>
+                        <li>Generate a KYC link for your customer and store the verification_id</li>
+                        <li>Customer completes verification through the provided link</li>
+                        <li>Receive verification results via callback or retrieve them via API using the verification_id</li>
+                    </ol>
+                </div>
+            </section>
+        </article>
+        <article>
+            <h3>Authentication</h3>
+            <p>All API requests require authentication using API keys. Include your API keys in the request headers:</p>
+            <section>
+                <div>
+                    <ol>
+                        <li>Public-Key: YOUR_PUBLIC_KEY</li>
+                        <li>Private-Key: YOUR_PRIVATE_KEY</li>
+                    </ol>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <div><img src="" alt=""> Security Notice</div>
+                    <p>Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, etc.</p>
+                </div>
+            </section>
+            <section>
+                <h3>Security Best Practices</h3>
+                <ul>
+                    <li><strong>Never expose your private key</strong> in client-side code or public repositories</li>
+                    <li><strong>Always use HTTPS</strong> for API calls to ensure data is encrypted in transit</li>
+                    <li><strong>Rotate your API keys</strong>periodically to minimize security risks </li>
+                    <li><strong>Implement proper error handling</strong>for authentication failures</li>
+                </ul>
+            </section>
+        </article>
+        <article>
+            <h3>Generate KYC Link</h3>
+            <div>
+                <small><img src="" alt="">Endpoint Overview</small>
+                <p>This endpoint creates a verification session and returns a link that can be used to complete the verification process. The response includes both the verification_id and the KYC link.</p>
+            </div>
+            <div>
+                <button>POST</button>
+                <small>index.php/generate_kyc_link</small>
+            </div>
+                        <div><div>Request</div> Response</div>
+            <section>
+                <div>
+                    <p class="bold">Headers</p>
+                    <div>
+                        <div>
+                            <p>Content-Type</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Public-Key</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Private-Key</p>
+                            <small>Your private API key</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="bold">Request Body</p>
+                    <div>
+                        <div>
+                            <p>project_id </p>
+                            <small>Your project ID</small>
+                        </div>
+                        <div>
+                            <p>customer_name </p>
+                            <small>The name of the customer to verify</small>
+                        </div>
+                        <div>
+                            <p>callback_url </p>
+                            <small>URL to receive verification results</small>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <div>
+                <ol>
+                    <li>{ "project_id": "YOUR_PROJECT_ID", "customer_name": "John Doe", "callback_url": "https://your-website.com/callback"}</li>
+                </ol>
+            </div>
+        </article>
+        <article>
+            <h3>Retrieve User Data</h3>
+            <p>Retrieves the verification data for a completed verification.</p>
+            <div>
+                <div>POST</div>
+                <small>index.php/user_data</small>
+            </div>
+                        <section>
+                <div>
+                    <p class="bold">Headers</p>
+                    <div>
+                        <div>
+                            <p>Content-Type</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Public-Key</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Private-Key</p>
+                            <small>Your private API key</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="bold">Request Body</p>
+                    <div>
+                        <div>
+                            <p>project_id </p>
+                            <small>Your project ID</small>
+                        </div>
+                        <div>
+                            <p>Project ID </p>
+                            <small>Your project ID</small>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <h3>Example Request</h3>
+            <div>
+                <ol>
+                    <li>{ "verification_id": "VERIFICATION_ID", "project_id": "YOUR_PROJECT_ID"}</li>
+                </ol>
+            </div>
+            <h3>Response</h3>
+            <div>
+                <ol><li>{  "user_data": {    "verification_id": "123",    "customer_name": "John Doe",    "bvn_status": "Verified",    "nin_status": "Verified",    "identity_status": "Verified",    "address_status": "Verified",    "bvn": "12345678901",    "nin": "12345678901",    "user_picture_url": "https://example.com/uploads/user_123.jpg",    "id_picture_url": "https://example.com/uploads/id_123.jpg",    "address": "123 Main Street, Lagos, Nigeria",    "verification_time_seconds": 120,    "verdict": "Completed"  }}</li></ol>
+            </div>
+        </article>
+        <article>
+            <h3>Get User Data</h3>
+            <p>Retrieves comprehensive data about a verified user. This endpoint is particularly useful for mobile applications that need to display detailed information about users who have completed the verification process.</p>
+                    <div>
+                <div>POST</div>
+                <small>index.php/user_data</small>
+            </div>
+                                    <section>
+                <div>
+                    <p class="bold">Headers</p>
+                    <div>
+                        <div>
+                            <p>Content-Type</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Public-Key</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Private-Key</p>
+                            <small>Your private API key</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="bold">Request Body</p>
+                        <div>
+                            <p>verification_id </p>
+                            <small>The ID of the verification to retrieve data for</small>
+                        </div>
+                </div>
+            </section>
+            <h3>Example Request</h3>
+            <div>
+                <ol>
+                    <li>{ "verification_id": "VERIFICATION_ID"}</li>
+                </ol>
+            </div>
+            <h3>Response</h3>
+            <div>
+                <ol>
+                    <li>{  "user_data": {    "verification_id": "123",    "customer_name": "John Doe",    "bvn_status": "Verified",    "nin_status": "Verified",    "identity_status": "Verified",    "address_status": "Verified",    "bvn": "12345678901",    "nin": "12345678901",    "user_picture_url": "https://example.com/uploads/user_123.jpg",    "id_picture_url": "https://example.com/uploads/id_123.jpg",    "address": "123 Main Street, Lagos, Nigeria",    "verification_time_seconds": 120,    "verdict": "Completed"  }}</li>
+                </ol>
+            </div>
+        </article>
+        <article>
+            <h3>List Verifications</h3>
+            <p>Retrieves a list of verifications for a specific project. This endpoint is particularly useful for mobile applications to find the verification_id for a specific customer.</p>
+                        <div>
+                <div>POST</div>
+                <small>index.php/list_verifications</small>
+            </div>
+                                                <section>
+                <div>
+                    <p class="bold">Headers</p>
+                    <div>
+                        <div>
+                            <p>Content-Type</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Public-Key</p>
+                            <small>application/json</small>
+                        </div>
+                        <div>
+                            <p>Private-Key</p>
+                            <small>Your private API key</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="bold">Request Body</p>
+                        <div>
+                            <p>project_id </p>
+                            <small>The ID of the project to list verifications for</small>
+                        </div>
+                        <div>
+                            <p>limit </p>
+                            <small>Maximum number of verifications to return (default: 100)</small>
+                        </div>
+                        <div>
+                            <p>offset  </p>
+                            <small>Number of verifications to skip (default: 0)</small>
+                        </div>
+                </div>
+            </section>
+                        <h3>Example Request</h3>
+            <div>
+                <ol>
+                    <li>{ "verification_id": "VERIFICATION_ID"}</li>
+                </ol>
+            </div>
+            <h3>Response</h3>
+            <div>
+                <ol>
+                    <li>{  "user_data": {    "verification_id": "123",    "customer_name": "John Doe",    "bvn_status": "Verified",    "nin_status": "Verified",    "identity_status": "Verified",    "address_status": "Verified",    "bvn": "12345678901",    "nin": "12345678901",    "user_picture_url": "https://example.com/uploads/user_123.jpg",    "id_picture_url": "https://example.com/uploads/id_123.jpg",    "address": "123 Main Street, Lagos, Nigeria",    "verification_time_seconds": 120,    "verdict": "Completed"  }}</li>
+                </ol>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
