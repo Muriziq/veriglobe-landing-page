@@ -24,7 +24,9 @@
         </div>
       </div>
     </header>
+    <div>
     <aside>
+        <section>
         <div>
             <p>Getting Started</p>
             <nav>
@@ -54,43 +56,99 @@
                 <a href="">Error Handling</a>
             </nav>
         </div>
+
+        </section>
     </aside>
     <main>
-        <article>
+        <article class="first">
             <h2>Veriglobe API Documentation</h2>
-            <div>
-                <small><img src="" alt="">Getting Started</small>
+            <div class="blue">
+                <small><img src="images/information.png" alt="">Getting Started</small>
                 <p>This documentation will help you integrate Veriglobe's identity verification services into your application. If you need any assistance, please contact our support team.</p>
             </div>
             <p>
                 The Veriglobe API provides a comprehensive suite of identity verification services, allowing developers to integrate KYC (Know Your Customer) functionality into their applications.
                 <br>
+                <br>
 Our API enables you to verify various forms of identification including Bank Verification Numbers (BVN), National Identification Numbers (NIN), identity documents, and address information.
             </p>
             <section>
-                <div>
-                    <div><img src="" alt=""><p>Generate KYC Link</p></div>
+                <div class="first1">
+                    <svg width="429" height="225" viewBox="0 0 429 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_108_6070)">
+<rect x="16" y="16" width="397" height="193" fill="#071C49"/>
+</g>
+<defs>
+<filter id="filter0_g_108_6070" x="0" y="0" width="429" height="225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.125 0.125" numOctaves="3" seed="6830" />
+<feDisplacementMap in="shape" scale="32" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_108_6070">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+</defs>
+</svg>
+
+                    <div><img src="images/link.png" alt=""><p>Generate KYC Link</p></div>
                     <p>Create a verification session and get a link for your customers to complete verification.</p>
                 </div>
-                <div>
-                    <div><img src="" alt=""><p>Retrieve User Data</p></div>
+                <div class="first1">
+                    <svg width="429" height="225" viewBox="0 0 429 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_108_6070)">
+<rect x="16" y="16" width="397" height="193" fill="#FFD230"/>
+</g>
+<defs>
+<filter id="filter0_g_108_6070" x="0" y="0" width="429" height="225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.125 0.125" numOctaves="3" seed="6830" />
+<feDisplacementMap in="shape" scale="32" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_108_6070">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+</defs>
+</svg>
+
+                    <div><img src="images/user-tick.png" alt=""><p>Retrieve User Data</p></div>
                     <p>Access comprehensive verification data for your customers after they complete the process.</p>
                 </div>
-                <div>
-                    <div><img src="" alt=""><p>List Verifications</p></div>
+                <div class="first1">
+                    <svg width="429" height="225" viewBox="0 0 429 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_108_6070)">
+<rect x="16" y="16" width="397" height="193" fill="#FFC9C9"/>
+</g>
+<defs>
+<filter id="filter0_g_108_6070" x="0" y="0" width="429" height="225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.125 0.125" numOctaves="3" seed="6830" />
+<feDisplacementMap in="shape" scale="32" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_108_6070">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+</defs>
+</svg>
+
+                    <div><img src="images/user-tick.png" alt=""><p>List Verifications</p></div>
                     <p>View all verification sessions for your projects and track their status.
 Base</p>
                 </div>
             </section>
         </article>
-        <article>
+        <article class="second">
             <h3>Base URL</h3>
             <section>
-                <div>
+                <div class="dark">
+                    <img src="images/Rectangle 430.svg" alt="">
                     <ol>
                         <li>https://api.veriglobe.net</li>
                         <li></li>
                     </ol>
+                    <button class="copy"><img src="images/copy.png" alt=""></button>
                 </div>
                 <div>
                     <h3>API Flow</h3>
@@ -102,19 +160,21 @@ Base</p>
                 </div>
             </section>
         </article>
-        <article>
+        <article class="third">
             <h3>Authentication</h3>
             <p>All API requests require authentication using API keys. Include your API keys in the request headers:</p>
-            <section>
-                <div>
+            <div class="third1">
+            <section >
+                <div class="dark">
+                                        <img src="images/Rectangle 430.svg" alt="">
                     <ol>
                         <li>Public-Key: YOUR_PUBLIC_KEY</li>
                         <li>Private-Key: YOUR_PRIVATE_KEY</li>
                     </ol>
-                    <img src="" alt="">
+                    <button><img src="images/copy.png" alt=""></button>
                 </div>
-                <div>
-                    <div><img src="" alt=""> Security Notice</div>
+                <div class="third3">
+                    <div><img src="images/security (2).png" alt=""> Security Notice</div>
                     <p>Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, etc.</p>
                 </div>
             </section>
@@ -127,10 +187,12 @@ Base</p>
                     <li><strong>Implement proper error handling</strong>for authentication failures</li>
                 </ul>
             </section>
+            </div>
+
         </article>
         <article>
             <h3>Generate KYC Link</h3>
-            <div>
+            <div class="blue">
                 <small><img src="" alt="">Endpoint Overview</small>
                 <p>This endpoint creates a verification session and returns a link that can be used to complete the verification process. The response includes both the verification_id and the KYC link.</p>
             </div>
@@ -334,5 +396,6 @@ Base</p>
             </div>
         </article>
     </main>
+    </div>
 </body>
 </html>

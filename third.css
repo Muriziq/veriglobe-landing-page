@@ -1,0 +1,229 @@
+body > div{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+aside section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+aside div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+aside  nav{
+    display: flex;
+    flex-direction: column;
+}
+aside a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #071C49;
+    padding: 0.5rem 0;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+    padding-left: 3rem;
+
+}
+aside :is(a:hover,a:active){
+    border-left: 8px solid #64DFDF;
+    background-image: linear-gradient(to right,#64DFDF,#ffffff);
+}
+aside p{
+    color: #71717B;
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding-left: 3rem;
+}
+.first{
+    padding: 4rem 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.9rem;
+
+
+}
+.first h2{
+    font-size: 2rem;
+    color: #071C49;
+    font-weight: 700;
+}
+.blue{
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.blue::before{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    content: "";
+    background-image: url("./images/Rectangle\ 426.svg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.blue > small{
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    align-items: center;
+    font-weight: 500;
+    color: #071C49;
+}
+.blue > p{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.first section{
+    display: grid ;
+    grid-template-columns: repeat(3,300px);
+    justify-content: space-between;
+
+gap: 1rem;
+}
+.first1{
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: #000000;
+}
+.first1:nth-of-type(1){
+    color: #ffffff;
+}
+.first1 > svg{
+    position: absolute;
+    width: 100% ;
+    top: -30px;
+    left: 0;
+    z-index: -1;
+}
+.first1 > div{
+    display: flex;
+    font-weight: 600;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+.first1 img{
+    height: 18px;
+    width: auto;
+}
+h3{
+    font-weight: 600;
+    color: #071C49;
+
+}
+.second{
+    padding: 1rem 1rem 1rem 2rem;
+}
+.second > section, .third1{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: start;
+
+}
+.second > section > div:last-child{
+    background-color: #FAFAFA;
+    border: 1px solid #E4E4E7;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.second > section ol,.third1 > section:last-child ul{
+    padding-left: 1rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 1rem;
+}
+.dark ol{
+        padding-left: 1rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+.dark{
+    position: relative;
+    padding: 2rem 4rem;
+    color: #ffffff;
+}
+.dark > img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    left: 0;
+}
+.dark button{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    background-color: transparent;
+    border: none;
+}
+.third1 .dark{
+    padding: 3rem 4rem;
+
+}
+.third1 > section:last-child{
+    border: 1px solid #E4E4E7;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.third1 strong{
+    font-weight: 600;
+}
+.third{
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+.third1 > section:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.third3{
+    width: 70%;
+    border-left: 8px solid #FE9A00;
+    background-image: linear-gradient(to right,#FFD230 10%,#ffffff 60%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 300;
+    color: #071C49;
+    font-size: 0.8rem;
+    padding: 1rem;
+    margin-left: 25px;
+}
+.third3 > div{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    font-weight: 600;
+    color: #E17100;
+}
