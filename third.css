@@ -1,3 +1,6 @@
+body{
+    background-color: #FAFAFA;
+}
 body > div{
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -6,6 +9,7 @@ aside section{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    background-color: #ffffff;
 }
 aside div{
     display: flex;
@@ -42,6 +46,9 @@ aside p{
     flex-direction: column;
     gap: 1rem;
     font-size: 0.9rem;
+    background-color: #ffffff;
+    border-left: 1px solid #E4E4E7;
+    border-top: 1px solid #E4E4E7;
 
 
 }
@@ -130,6 +137,20 @@ h3{
 }
 .second{
     padding: 1rem 1rem 1rem 2rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.second::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+        background-color: #ffffff;
 }
 .second > section, .third1{
     display: grid;
@@ -175,7 +196,7 @@ h3{
     top: -20px;
     left: 0;
 }
-.dark button{
+.copy{
     position: absolute;
     right: 70px;
     top: 30px;
@@ -200,6 +221,20 @@ h3{
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 1rem 1rem 2rem;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+}
+.third::before{
+       content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+        background-color: #ffffff;
 }
 .third1 > section:first-child{
     display: flex;
@@ -226,4 +261,156 @@ h3{
     align-items: center;
     font-weight: 600;
     color: #E17100;
+}
+
+.fourth{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.post{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    border: 1px solid #E4E4E7;
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    align-items: center;
+}
+
+.post small{
+    font-weight: 300;
+    font-size: 0.7rem;
+}
+.post div{
+    padding: 0.5rem 1rem;
+    background-color: #F0FDF4;
+    border: 1px solid #B9F8CF;
+    font-size: 0.9rem;
+    font-size: 500;
+    color: #00A63E;
+}
+.request{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-weight: 600;
+    color: #71717B;
+    align-items: center;
+}
+.request div{
+    padding: 1rem;
+    background-color: #071C49;
+    color: #64DFDF;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.header{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+}
+.contain{
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.header .bold{
+    font-weight: 600;
+    color: #071C49;
+}
+.header > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+.header > div > div{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    flex: 1;
+}
+.header > div > div div{
+    padding: 1rem;
+    border-left: 1px solid #D4D4D8;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #071C49;
+    flex: 1;
+}
+.header small{
+    font-size: 0.6rem;
+    color: #71717B;
+    text-wrap: nowrap;
+}
+.header span{
+    font-size: 0.6rem;
+    color: #2B6767;
+    padding: 0.2rem 0.7rem;
+    background-color: #E0F9F9;
+    border-radius: 0.3rem;
+    margin-left: 0.3rem;
+}
+.header p{
+    text-wrap: nowrap;
+}
+.code{
+    position: relative;
+    padding: 1rem 4rem;
+    z-index: 1;
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+.code li{
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.code::before{
+    content: "";
+    width: 100%;
+    background-image: url("./images/Rectangle\ 430\ \(2\).svg");
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+.code1{
+        position: relative;
+    padding: 1rem 4rem;
+    z-index: 1;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+.code1::before{
+        content: "";
+    width: 100%;
+    background-image: url("./images/Rectangle\ 430\ \(3\).svg");
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+.code1 li{
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }

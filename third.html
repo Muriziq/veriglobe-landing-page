@@ -171,7 +171,7 @@ Base</p>
                         <li>Public-Key: YOUR_PUBLIC_KEY</li>
                         <li>Private-Key: YOUR_PRIVATE_KEY</li>
                     </ol>
-                    <button><img src="images/copy.png" alt=""></button>
+                    <button class="copy"><img src="images/copy.png" alt=""></button>
                 </div>
                 <div class="third3">
                     <div><img src="images/security (2).png" alt=""> Security Notice</div>
@@ -190,18 +190,19 @@ Base</p>
             </div>
 
         </article>
-        <article>
+        <article class="fourth">
             <h3>Generate KYC Link</h3>
             <div class="blue">
                 <small><img src="" alt="">Endpoint Overview</small>
                 <p>This endpoint creates a verification session and returns a link that can be used to complete the verification process. The response includes both the verification_id and the KYC link.</p>
             </div>
-            <div>
-                <button>POST</button>
+            <div class="post">
+                <div>POST</div>
                 <small>index.php/generate_kyc_link</small>
             </div>
-                        <div><div>Request</div> Response</div>
-            <section>
+            <div class="contain">
+                        <div class="request"><div>Request</div> Response</div>
+            <section class="header">
                 <div>
                     <p class="bold">Headers</p>
                     <div>
@@ -223,35 +224,39 @@ Base</p>
                     <p class="bold">Request Body</p>
                     <div>
                         <div>
-                            <p>project_id </p>
+                            <p>project_id <span>Required</span> </p>
                             <small>Your project ID</small>
                         </div>
                         <div>
-                            <p>customer_name </p>
+                            <p>customer_name <span>Required</span> </p>
                             <small>The name of the customer to verify</small>
                         </div>
                         <div>
-                            <p>callback_url </p>
+                            <p>callback_url  <span>Required</span></p>
                             <small>URL to receive verification results</small>
                         </div>
                     </div>
 
                 </div>
             </section>
-            <div>
+            <div class="code">
                 <ol>
-                    <li>{ "project_id": "YOUR_PROJECT_ID", "customer_name": "John Doe", "callback_url": "https://your-website.com/callback"}</li>
+                    <li>{ <br> &nbsp; "project_id": "YOUR_PROJECT_ID",<br> &nbsp; "customer_name": "John Doe",<br> &nbsp; "callback_url": "https://your-website.com/callback"<br>}</li>
                 </ol>
+                <button class="copy"><img src="images/copy.png" alt=""></button>
             </div>
+            </div>
+
         </article>
-        <article>
+        <article class="fourth">
             <h3>Retrieve User Data</h3>
             <p>Retrieves the verification data for a completed verification.</p>
-            <div>
+            <div class="post">
                 <div>POST</div>
                 <small>index.php/user_data</small>
             </div>
-                        <section>
+            <div class="contain">
+                        <section class="header">
                 <div>
                     <p class="bold">Headers</p>
                     <div>
@@ -285,24 +290,30 @@ Base</p>
                 </div>
             </section>
             <h3>Example Request</h3>
-            <div>
+            <div class="code">
                 <ol>
-                    <li>{ "verification_id": "VERIFICATION_ID", "project_id": "YOUR_PROJECT_ID"}</li>
+                    <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID", <br> &nbsp; "project_id": "YOUR_PROJECT_ID"  <br> }</li>
                 </ol>
+                                <button class="copy"><img src="images/copy.png" alt=""></button>
+
             </div>
             <h3>Response</h3>
-            <div>
-                <ol><li>{  "user_data": {    "verification_id": "123",    "customer_name": "John Doe",    "bvn_status": "Verified",    "nin_status": "Verified",    "identity_status": "Verified",    "address_status": "Verified",    "bvn": "12345678901",    "nin": "12345678901",    "user_picture_url": "https://example.com/uploads/user_123.jpg",    "id_picture_url": "https://example.com/uploads/id_123.jpg",    "address": "123 Main Street, Lagos, Nigeria",    "verification_time_seconds": 120,    "verdict": "Completed"  }}</li></ol>
+            <div class="code1">
+                <ol><li>{ <br> &nbsp; "user_data": {<br> &nbsp;    "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe",<br> &nbsp;    "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified",<br> &nbsp;    "identity_status": "Verified",<br> &nbsp;    "address_status": "Verified", <br> &nbsp;   "bvn": "12345678901",<br> &nbsp;    "nin": "12345678901", <br> &nbsp;   "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",<br> &nbsp;    "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120, <br> &nbsp;   "verdict": "Completed"<br> &nbsp;  }<br> &nbsp;}</li></ol>
+                  <button class="copy"><img src="images/copy.png" alt=""></button>
+          
             </div>
+            </div>
+
         </article>
-        <article>
+        <article class="fourth">
             <h3>Get User Data</h3>
             <p>Retrieves comprehensive data about a verified user. This endpoint is particularly useful for mobile applications that need to display detailed information about users who have completed the verification process.</p>
-                    <div>
+                    <div class="post">
                 <div>POST</div>
                 <small>index.php/user_data</small>
             </div>
-                                    <section>
+                                    <section class="header">
                 <div>
                     <p class="bold">Headers</p>
                     <div>
@@ -329,15 +340,15 @@ Base</p>
                 </div>
             </section>
             <h3>Example Request</h3>
-            <div>
+            <div class="code">
                 <ol>
-                    <li>{ "verification_id": "VERIFICATION_ID"}</li>
+                    <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID"<br>}</li>
                 </ol>
             </div>
             <h3>Response</h3>
-            <div>
+            <div class="code1">
                 <ol>
-                    <li>{  "user_data": {    "verification_id": "123",    "customer_name": "John Doe",    "bvn_status": "Verified",    "nin_status": "Verified",    "identity_status": "Verified",    "address_status": "Verified",    "bvn": "12345678901",    "nin": "12345678901",    "user_picture_url": "https://example.com/uploads/user_123.jpg",    "id_picture_url": "https://example.com/uploads/id_123.jpg",    "address": "123 Main Street, Lagos, Nigeria",    "verification_time_seconds": 120,    "verdict": "Completed"  }}</li>
+                    <li>{<br> &nbsp;  "user_data": { <br> &nbsp;   "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe", <br> &nbsp;   "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified", <br> &nbsp;   "identity_status": "Verified", <br> &nbsp;   "address_status": "Verified",<br> &nbsp;    "bvn": "12345678901", <br> &nbsp;   "nin": "12345678901",<br> &nbsp;    "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",  <br> &nbsp;  "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120,<br> &nbsp;    "verdict": "Completed"  <br> &nbsp;}<br>}</li>
                 </ol>
             </div>
         </article>
