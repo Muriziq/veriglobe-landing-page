@@ -180,8 +180,8 @@
 }
 .third-article svg,.fourth-article svg{
     position: absolute;
-    height: 110%;
-    width: 110%;
+    height: auto;
+    width: 105%;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -223,10 +223,11 @@
     grid-template-columns: repeat(3,300px);
     grid-auto-rows: 70vh;
     gap: 1.5rem;
+    margin-top: 1.5rem;
 
 }
 .fourth-article section > div{
-        padding: 1.5rem 1rem;
+        padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
