@@ -313,6 +313,7 @@ Base</p>
                 <div>POST</div>
                 <small>index.php/user_data</small>
             </div>
+            <div class="contain">
                                     <section class="header">
                 <div>
                     <p class="bold">Headers</p>
@@ -333,10 +334,13 @@ Base</p>
                 </div>
                 <div>
                     <p class="bold">Request Body</p>
+                    <div>
                         <div>
                             <p>verification_id </p>
                             <small>The ID of the verification to retrieve data for</small>
                         </div>
+                    </div>
+
                 </div>
             </section>
             <h3>Example Request</h3>
@@ -344,22 +348,27 @@ Base</p>
                 <ol>
                     <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID"<br>}</li>
                 </ol>
+                                <button class="copy"><img src="images/copy.png" alt=""></button>
             </div>
             <h3>Response</h3>
             <div class="code1">
                 <ol>
                     <li>{<br> &nbsp;  "user_data": { <br> &nbsp;   "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe", <br> &nbsp;   "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified", <br> &nbsp;   "identity_status": "Verified", <br> &nbsp;   "address_status": "Verified",<br> &nbsp;    "bvn": "12345678901", <br> &nbsp;   "nin": "12345678901",<br> &nbsp;    "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",  <br> &nbsp;  "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120,<br> &nbsp;    "verdict": "Completed"  <br> &nbsp;}<br>}</li>
                 </ol>
+                                <button class="copy"><img src="images/copy.png" alt=""></button>
             </div>
+            </div>
+
         </article>
-        <article>
+        <article class="fourth">
             <h3>List Verifications</h3>
             <p>Retrieves a list of verifications for a specific project. This endpoint is particularly useful for mobile applications to find the verification_id for a specific customer.</p>
-                        <div>
+                        <div class="post">
                 <div>POST</div>
                 <small>index.php/list_verifications</small>
             </div>
-                                                <section>
+            <div class="contain">
+                                                <section class="header">
                 <div>
                     <p class="bold">Headers</p>
                     <div>
@@ -379,33 +388,86 @@ Base</p>
                 </div>
                 <div>
                     <p class="bold">Request Body</p>
+                    <div>
                         <div>
-                            <p>project_id </p>
+                            <p>project_id <span>Required</span></p>
                             <small>The ID of the project to list verifications for</small>
                         </div>
                         <div>
                             <p>limit </p>
-                            <small>Maximum number of verifications to return (default: 100)</small>
+                            <small>Maximum number of verifications to <br> return (default: 100)</small>
                         </div>
                         <div>
                             <p>offset  </p>
                             <small>Number of verifications to skip (default: 0)</small>
                         </div>
+                    </div>
+
                 </div>
             </section>
                         <h3>Example Request</h3>
-            <div>
+            <div class="code">
                 <ol>
-                    <li>{ "verification_id": "VERIFICATION_ID"}</li>
+                    <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID" <br>}</li>
                 </ol>
+                                <button class="copy"><img src="images/copy.png" alt=""></button>
             </div>
             <h3>Response</h3>
-            <div>
+            <div class="code1">
                 <ol>
-                    <li>{  "user_data": {    "verification_id": "123",    "customer_name": "John Doe",    "bvn_status": "Verified",    "nin_status": "Verified",    "identity_status": "Verified",    "address_status": "Verified",    "bvn": "12345678901",    "nin": "12345678901",    "user_picture_url": "https://example.com/uploads/user_123.jpg",    "id_picture_url": "https://example.com/uploads/id_123.jpg",    "address": "123 Main Street, Lagos, Nigeria",    "verification_time_seconds": 120,    "verdict": "Completed"  }}</li>
+                    <li>{ <br> &nbsp; "user_data": { <br> &nbsp;    "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe",  <br> &nbsp;  "bvn_status": "Verified", <br> &nbsp;   "nin_status": "Verified", <br> &nbsp;   "identity_status": "Verified", <br> &nbsp;   "address_status": "Verified",   <br> &nbsp; "bvn": "12345678901",  <br> &nbsp;  "nin": "12345678901",  <br> &nbsp;  "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg", <br> &nbsp;   "address": "123 Main Street, Lagos, Nigeria",  <br> &nbsp;  "verification_time_seconds": 120, <br> &nbsp;   "verdict": "Completed" <br> &nbsp; }<br>}</li>
                 </ol>
+                <button class="copy"><img src="images/copy.png" alt=""></button>
             </div>
+            </div>
+
         </article>
+            <footer>
+        <section>
+          <div>
+            <img
+              src="images/063b0092354d3ae2148d69c697fa69cc3ef15567.png"
+              alt=""
+            />
+          </div>
+          <p>
+            Providing secure identity verification solutions for businesses
+            across Africa. Fast, reliable, and affordable.
+          </p>
+        </section>
+        <section>
+          <div>
+                        <p>Company</p>
+          <nav>
+
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+          </nav>
+          </div>
+<div>
+              <p>Product</p>
+          <nav>
+
+            <a href="">Pricing</a>
+            <a href="">Documentation</a>
+            <a href="">Integration</a>
+            <a href="">Features</a>
+          </nav>
+</div>
+<div>
+              <p>Resources</p>
+          <nav>
+
+            <a href="">Help Center</a>
+            <a href="">API Status</a>
+            <a href="">Terms Of Service</a>
+            <a href="">Privacy Poilicy</a>
+            <a href="">Case Study</a>
+          </nav>
+</div>
+
+        </section>
+    </footer>
     </main>
     </div>
 </body>
