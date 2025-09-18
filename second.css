@@ -11,11 +11,27 @@
     background-color: #000000;
     z-index: 1;
 }
-.first-article h1{
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #ffffff;
+.first-article svg{
+    width: 80%;
+    height: auto;
 }
+.first-article path{
+    stroke-width: 2;
+    stroke: #ffffff;
+    stroke-dasharray: 6880.97412109375;
+    animation: stroke 7s ease-in-out forwards;
+    fill: transparent;
+
+}
+@keyframes stroke {
+    0%{
+        stroke-dashoffset: 6880.97412109375;}
+    100%{
+        stroke-dashoffset: 0;
+
+    }
+}
+
 .first-article::before{
     left: -20vw;
     top: 50%;
@@ -243,11 +259,14 @@
     -webkit-appearance: none;
     outline: none;
     margin: 2rem 0;
+    background-image: linear-gradient(to right, #64DFDF 0%, #64DFDF 50%, #E4E4E7 50%, #E4E4E7 100%);
+    transition: all 450ms ease-in;
+    border-radius: 1rem;
 
 }
 .third-article input::-webkit-slider-runnable-track{
     height: 10px;
-    background-color: #E4E4E7;
+    background-color: transparent;
     border-radius: 1rem;
 
 }
