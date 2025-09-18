@@ -66,3 +66,15 @@ function secondPage(){
     secondTimeline.fromTo(".second1",{opacity:0,y:100},{opacity:1,y:0})
     gsap.fromTo(document.querySelectorAll(".fourth-article  div"),{opacity:0,y:60},{opacity:1,y:0,stagger:0.2,scrollTrigger:{trigger:document.querySelector(".fourth-article section"),toggleActions:"play none resume none",start:"top 90%"}})
 }
+
+
+function caseStudy(){
+    gsap.fromTo("h1",{opacity:0,y:50},{opacity:1,y:0,duration:1})
+    const sections = Array.from(document.querySelectorAll(".second section"))
+    sections.forEach(section =>{
+        const divs = Array.from(section.querySelectorAll("div"))
+        const sectionTimeline = gsap.timeline({scrollTrigger:{trigger:section,toggleActions:"play none resume none",start:"top 90%"}})
+        sectionTimeline.fromTo(divs[0],{opacity:0,x:-40},{opacity:1,x:0,duration:1})
+        sectionTimeline.fromTo(divs[1],{opacity:0,x:40},{opacity:1,x:0,duration:1},"-=0.5")
+    })
+}
