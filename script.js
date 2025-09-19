@@ -78,3 +78,28 @@ function caseStudy(){
         sectionTimeline.fromTo(divs[1],{opacity:0,x:40},{opacity:1,x:0,duration:1},"-=0.5")
     })
 }
+function fourth(){
+    const firstTimeline = gsap.timeline()
+    firstTimeline.to(".first",{opacity:1})
+    firstTimeline.fromTo(document.querySelector(".first img"),{opacity:0,x:-50},{opacity:1,x:0})
+    firstTimeline.fromTo(document.querySelectorAll(".first div"),{y:50,opacity:0},{y:0,opacity:1,stagger:0.2})
+    document.querySelectorAll(".second,.third").forEach(second =>{
+        gsap.fromTo(second.querySelector("h3"),{opacity:0,y:40},{opacity:1,y:0,scrollTrigger:{trigger:second,toggleActions:"play none resume none",start:"top 90%"}})
+        gsap.fromTo(second.querySelectorAll("li"),{opacity:0,y:40},{opacity:1,y:0,scrollTrigger:{trigger:second.querySelector("ul"),toggleActions:"play none resume none",start:"top 90%"},stagger:0.2})
+    })
+
+    gsap.fromTo(document.querySelector(".fourth1"),{opacity:0,y:50},{opacity:1,y:0,ease:"power1.inOut",scrollTrigger:{trigger:document.querySelector(".fourth1"),start:"top 90%",end:"bottom top",toggleActions:"play none resume none"},duration:0.5})
+    gsap.fromTo(document.querySelectorAll(".fourth2 div"),{opacity:0,y:50},{opacity:1,y:0,ease:"power1.inOut",scrollTrigger:{trigger:document.querySelector(".fourth2"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:0.5,stagger:0.2})
+}
+function third(){
+    const copyItem = document.querySelectorAll(".copyItem")
+    const copy = document.querySelectorAll(".copy")
+    copy.forEach((copy,i)=>copy.addEventListener("click",()=>{
+        navigator.clipboard.writeText(copyItem[i].textContent.trim())
+        .then(()=>{
+            gsap.fromTo(".copied",{top:50,opacity:0},{top:150,opacity:1})
+            gsap.to(".copied",{opacity:0,delay:1})
+        })
+        .catch(err => console.log(err))
+    }))
+}

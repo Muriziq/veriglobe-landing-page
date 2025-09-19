@@ -6,6 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="third.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 </head>
 <body>
         <header>
@@ -144,7 +148,7 @@ Base</p>
             <section>
                 <div class="dark">
                     <img src="images/Rectangle 430.svg" alt="">
-                    <ol>
+                    <ol class="copyItem">
                         <li>https://api.veriglobe.net</li>
                         <li></li>
                     </ol>
@@ -167,7 +171,7 @@ Base</p>
             <section >
                 <div class="dark">
                                         <img src="images/Rectangle 430.svg" alt="">
-                    <ol>
+                    <ol class="copyItem">
                         <li>Public-Key: YOUR_PUBLIC_KEY</li>
                         <li>Private-Key: YOUR_PRIVATE_KEY</li>
                     </ol>
@@ -240,7 +244,7 @@ Base</p>
                 </div>
             </section>
             <div class="code">
-                <ol>
+                <ol class="copyItem">
                     <li>{ <br> &nbsp; "project_id": "YOUR_PROJECT_ID",<br> &nbsp; "customer_name": "John Doe",<br> &nbsp; "callback_url": "https://your-website.com/callback"<br>}</li>
                 </ol>
                 <button class="copy"><img src="images/copy.png" alt=""></button>
@@ -291,7 +295,7 @@ Base</p>
             </section>
             <h3>Example Request</h3>
             <div class="code">
-                <ol>
+                <ol class="copyItem">
                     <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID", <br> &nbsp; "project_id": "YOUR_PROJECT_ID"  <br> }</li>
                 </ol>
                                 <button class="copy"><img src="images/copy.png" alt=""></button>
@@ -299,7 +303,7 @@ Base</p>
             </div>
             <h3>Response</h3>
             <div class="code1">
-                <ol><li>{ <br> &nbsp; "user_data": {<br> &nbsp;    "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe",<br> &nbsp;    "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified",<br> &nbsp;    "identity_status": "Verified",<br> &nbsp;    "address_status": "Verified", <br> &nbsp;   "bvn": "12345678901",<br> &nbsp;    "nin": "12345678901", <br> &nbsp;   "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",<br> &nbsp;    "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120, <br> &nbsp;   "verdict": "Completed"<br> &nbsp;  }<br> &nbsp;}</li></ol>
+                <ol class="copyItem"><li>{ <br> &nbsp; "user_data": {<br> &nbsp;    "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe",<br> &nbsp;    "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified",<br> &nbsp;    "identity_status": "Verified",<br> &nbsp;    "address_status": "Verified", <br> &nbsp;   "bvn": "12345678901",<br> &nbsp;    "nin": "12345678901", <br> &nbsp;   "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",<br> &nbsp;    "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120, <br> &nbsp;   "verdict": "Completed"<br> &nbsp;  }<br> &nbsp;}</li></ol>
                   <button class="copy"><img src="images/copy.png" alt=""></button>
           
             </div>
@@ -345,14 +349,14 @@ Base</p>
             </section>
             <h3>Example Request</h3>
             <div class="code">
-                <ol>
+                <ol class="copyItem">
                     <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID"<br>}</li>
                 </ol>
                                 <button class="copy"><img src="images/copy.png" alt=""></button>
             </div>
             <h3>Response</h3>
             <div class="code1">
-                <ol>
+                <ol class="copyItem">
                     <li>{<br> &nbsp;  "user_data": { <br> &nbsp;   "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe", <br> &nbsp;   "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified", <br> &nbsp;   "identity_status": "Verified", <br> &nbsp;   "address_status": "Verified",<br> &nbsp;    "bvn": "12345678901", <br> &nbsp;   "nin": "12345678901",<br> &nbsp;    "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",  <br> &nbsp;  "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120,<br> &nbsp;    "verdict": "Completed"  <br> &nbsp;}<br>}</li>
                 </ol>
                                 <button class="copy"><img src="images/copy.png" alt=""></button>
@@ -394,11 +398,11 @@ Base</p>
                             <small>The ID of the project to list verifications for</small>
                         </div>
                         <div>
-                            <p>limit </p>
-                            <small>Maximum number of verifications to <br> return (default: 100)</small>
+                            <p>limit <span style="background-color: #F4F4F5;">Optional</span> </p>
+                            <small>Maximum number of verifications to return (default: 100)</small>
                         </div>
                         <div>
-                            <p>offset  </p>
+                            <p>offset <span style="background-color: #F4F4F5;">Optional</span> </p>
                             <small>Number of verifications to skip (default: 0)</small>
                         </div>
                     </div>
@@ -407,14 +411,14 @@ Base</p>
             </section>
                         <h3>Example Request</h3>
             <div class="code">
-                <ol>
+                <ol class="copyItem">
                     <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID" <br>}</li>
                 </ol>
                                 <button class="copy"><img src="images/copy.png" alt=""></button>
             </div>
             <h3>Response</h3>
             <div class="code1">
-                <ol>
+                <ol class="copyItem">
                     <li>{ <br> &nbsp; "user_data": { <br> &nbsp;    "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe",  <br> &nbsp;  "bvn_status": "Verified", <br> &nbsp;   "nin_status": "Verified", <br> &nbsp;   "identity_status": "Verified", <br> &nbsp;   "address_status": "Verified",   <br> &nbsp; "bvn": "12345678901",  <br> &nbsp;  "nin": "12345678901",  <br> &nbsp;  "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg", <br> &nbsp;   "address": "123 Main Street, Lagos, Nigeria",  <br> &nbsp;  "verification_time_seconds": 120, <br> &nbsp;   "verdict": "Completed" <br> &nbsp; }<br>}</li>
                 </ol>
                 <button class="copy"><img src="images/copy.png" alt=""></button>
@@ -470,5 +474,12 @@ Base</p>
     </footer>
     </main>
     </div>
+        <div class="copied">
+        copied!
+    </div>
+    <script src="script.js"></script>
+    <script>
+        third()
+    </script>
 </body>
 </html>
