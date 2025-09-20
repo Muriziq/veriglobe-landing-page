@@ -71,23 +71,24 @@ aside p{
     position: relative;
     z-index: 1;
     padding: 2rem;
-    height: 110px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     
 }
 
-.blue::before{
+.blue > img{
     position: absolute;
     width: 100%;
-    left: 0;
-    top: 0;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     z-index: -1;
     content: "";
-    background-image: url("./images/Rectangle\ 426.svg");
     background-size: cover;
-    height: 100%;
+
 }
 .blue > small{
     display: flex;
@@ -376,7 +377,6 @@ h3{
     position: relative;
     padding: 2rem 4rem;
     z-index: 1;
-    height: 160px;
     display: flex;
     align-items: center;
 }
@@ -386,15 +386,14 @@ h3{
     font-weight: 300;
     margin-bottom: 1rem;
 }
-.code::before{
+.code > img{
     content: "";
     width: 100%;
-    background-image: url("./images/Rectangle\ 430\ \(2\).svg");
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 100%;
     background-size: cover;
     z-index: -1;
 }
@@ -402,18 +401,17 @@ h3{
         position: relative;
     padding: 1rem 4rem;
     z-index: 1;
-    height: 265px;
     display: flex;
     align-items: center;
 }
-.code1::before{
+.code1 > img{
         content: "";
     width: 100%;
-    background-image: url("./images/Rectangle\ 430\ \(3\).svg");
     position: absolute;
-    top: -20px;
-    left: 0;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
     background-size: cover;
     z-index: -1;
     background-repeat: no-repeat;

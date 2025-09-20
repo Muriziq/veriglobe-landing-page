@@ -12,15 +12,15 @@
 
 </head>
 <body>
-        <header>
+    <header>
       <img src="images/063b0092354d3ae2148d69c697fa69cc3ef15567.png" alt="" />
       <div>
         <nav>
-          <a href="">Home</a>
-          <a href="">Pricing</a>
-          <a href="">Documentation</a>
-          <a href="">About Us</a>
-          <a href="">Case Study</a>
+          <a href="index.html">Home</a>
+          <a href="second.html">Pricing</a>
+          <a href="third.html">Documentation</a>
+          <a href="about.html">About Us</a>
+          <a href="case.html">Case Study</a>
         </nav>
         <div>
           <button>Sign In</button>
@@ -34,17 +34,17 @@
         <div>
             <p>Getting Started</p>
             <nav>
-                <a href="">Overview</a>
-                <a href="">Authentication</a>
+                <a href="#overview">Overview</a>
+                <a href="#authentication">Authentication</a>
             </nav>
         </div>
         <div>
             <p>API ENDPOINTS</p>
             <nav>
-                <a href="">Generate KYC Link</a>
-                <a href="">Retrieve User Data</a>
-                <a href="">Get User Data</a>
-                <a href="">List Verifications</a>
+                <a href="#generate">Generate KYC Link</a>
+                <a href="#retrieve">Retrieve User Data</a>
+                <a href="#getUser">Get User Data</a>
+                <a href="#list">List Verifications</a>
                 <a href="">BVN Verification</a>
                 <a href="">NIN Verification</a>
                 <a href="">Identity Verification</a>
@@ -64,9 +64,10 @@
         </section>
     </aside>
     <main>
-        <article class="first">
+        <article class="first" id="overview">
             <h2>Veriglobe API Documentation</h2>
             <div class="blue">
+                <img src="images/Rectangle 426.svg" alt="">
                 <small><img src="images/information.png" alt="">Getting Started</small>
                 <p>This documentation will help you integrate Veriglobe's identity verification services into your application. If you need any assistance, please contact our support team.</p>
             </div>
@@ -119,7 +120,7 @@ Our API enables you to verify various forms of identification including Bank Ver
                     <div><img src="images/user-tick.png" alt=""><p>Retrieve User Data</p></div>
                     <p>Access comprehensive verification data for your customers after they complete the process.</p>
                 </div>
-                <div class="first1">
+                <div class="first1" >
                     <svg width="429" height="225" viewBox="0 0 429 225" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_g_108_6070)">
 <rect x="16" y="16" width="397" height="193" fill="#FFC9C9"/>
@@ -164,7 +165,7 @@ Base</p>
                 </div>
             </section>
         </article>
-        <article class="third">
+        <article class="third" id="authentication">
             <h3>Authentication</h3>
             <p>All API requests require authentication using API keys. Include your API keys in the request headers:</p>
             <div class="third1">
@@ -194,9 +195,10 @@ Base</p>
             </div>
 
         </article>
-        <article class="fourth">
+        <article class="fourth" id="generate">
             <h3>Generate KYC Link</h3>
             <div class="blue">
+                                <img src="images/Rectangle 426.svg" alt="">
                 <small><img src="" alt="">Endpoint Overview</small>
                 <p>This endpoint creates a verification session and returns a link that can be used to complete the verification process. The response includes both the verification_id and the KYC link.</p>
             </div>
@@ -244,6 +246,7 @@ Base</p>
                 </div>
             </section>
             <div class="code">
+                <img src="images/Rectangle 430 (2).svg" alt="">
                 <ol class="copyItem">
                     <li>{ <br> &nbsp; "project_id": "YOUR_PROJECT_ID",<br> &nbsp; "customer_name": "John Doe",<br> &nbsp; "callback_url": "https://your-website.com/callback"<br>}</li>
                 </ol>
@@ -252,7 +255,7 @@ Base</p>
             </div>
 
         </article>
-        <article class="fourth">
+        <article class="fourth" id="retrieve">
             <h3>Retrieve User Data</h3>
             <p>Retrieves the verification data for a completed verification.</p>
             <div class="post">
@@ -295,6 +298,8 @@ Base</p>
             </section>
             <h3>Example Request</h3>
             <div class="code">
+                                <img src="images/Rectangle 430 (2).svg" alt="">
+
                 <ol class="copyItem">
                     <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID", <br> &nbsp; "project_id": "YOUR_PROJECT_ID"  <br> }</li>
                 </ol>
@@ -303,6 +308,7 @@ Base</p>
             </div>
             <h3>Response</h3>
             <div class="code1">
+                                <img src="images/Rectangle 430 (3).svg" alt="">
                 <ol class="copyItem"><li>{ <br> &nbsp; "user_data": {<br> &nbsp;    "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe",<br> &nbsp;    "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified",<br> &nbsp;    "identity_status": "Verified",<br> &nbsp;    "address_status": "Verified", <br> &nbsp;   "bvn": "12345678901",<br> &nbsp;    "nin": "12345678901", <br> &nbsp;   "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",<br> &nbsp;    "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120, <br> &nbsp;   "verdict": "Completed"<br> &nbsp;  }<br> &nbsp;}</li></ol>
                   <button class="copy"><img src="images/copy.png" alt=""></button>
           
@@ -310,7 +316,7 @@ Base</p>
             </div>
 
         </article>
-        <article class="fourth">
+        <article class="fourth" id="getUser">
             <h3>Get User Data</h3>
             <p>Retrieves comprehensive data about a verified user. This endpoint is particularly useful for mobile applications that need to display detailed information about users who have completed the verification process.</p>
                     <div class="post">
@@ -349,6 +355,8 @@ Base</p>
             </section>
             <h3>Example Request</h3>
             <div class="code">
+                                <img src="images/Rectangle 430 (2).svg" alt="">
+
                 <ol class="copyItem">
                     <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID"<br>}</li>
                 </ol>
@@ -356,6 +364,7 @@ Base</p>
             </div>
             <h3>Response</h3>
             <div class="code1">
+                <img src="images/Rectangle 430 (3).svg" alt="">
                 <ol class="copyItem">
                     <li>{<br> &nbsp;  "user_data": { <br> &nbsp;   "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe", <br> &nbsp;   "bvn_status": "Verified",<br> &nbsp;    "nin_status": "Verified", <br> &nbsp;   "identity_status": "Verified", <br> &nbsp;   "address_status": "Verified",<br> &nbsp;    "bvn": "12345678901", <br> &nbsp;   "nin": "12345678901",<br> &nbsp;    "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg",  <br> &nbsp;  "address": "123 Main Street, Lagos, Nigeria", <br> &nbsp;   "verification_time_seconds": 120,<br> &nbsp;    "verdict": "Completed"  <br> &nbsp;}<br>}</li>
                 </ol>
@@ -364,7 +373,7 @@ Base</p>
             </div>
 
         </article>
-        <article class="fourth">
+        <article class="fourth" id="list">
             <h3>List Verifications</h3>
             <p>Retrieves a list of verifications for a specific project. This endpoint is particularly useful for mobile applications to find the verification_id for a specific customer.</p>
                         <div class="post">
@@ -411,6 +420,8 @@ Base</p>
             </section>
                         <h3>Example Request</h3>
             <div class="code">
+                                <img src="images/Rectangle 430 (2).svg" alt="">
+
                 <ol class="copyItem">
                     <li>{ <br> &nbsp; "verification_id": "VERIFICATION_ID" <br>}</li>
                 </ol>
@@ -418,6 +429,7 @@ Base</p>
             </div>
             <h3>Response</h3>
             <div class="code1">
+                                <img src="images/Rectangle 430 (3).svg" alt="">
                 <ol class="copyItem">
                     <li>{ <br> &nbsp; "user_data": { <br> &nbsp;    "verification_id": "123", <br> &nbsp;   "customer_name": "John Doe",  <br> &nbsp;  "bvn_status": "Verified", <br> &nbsp;   "nin_status": "Verified", <br> &nbsp;   "identity_status": "Verified", <br> &nbsp;   "address_status": "Verified",   <br> &nbsp; "bvn": "12345678901",  <br> &nbsp;  "nin": "12345678901",  <br> &nbsp;  "user_picture_url": "https://example.com/uploads/user_123.jpg", <br> &nbsp;   "id_picture_url": "https://example.com/uploads/id_123.jpg", <br> &nbsp;   "address": "123 Main Street, Lagos, Nigeria",  <br> &nbsp;  "verification_time_seconds": 120, <br> &nbsp;   "verdict": "Completed" <br> &nbsp; }<br>}</li>
                 </ol>
@@ -426,7 +438,7 @@ Base</p>
             </div>
 
         </article>
-            <footer>
+    <footer>
         <section>
           <div>
             <img
@@ -444,7 +456,7 @@ Base</p>
                         <p>Company</p>
           <nav>
 
-            <a href="">About Us</a>
+            <a href="about.html">About Us</a>
             <a href="">Contact Us</a>
           </nav>
           </div>
@@ -452,8 +464,8 @@ Base</p>
               <p>Product</p>
           <nav>
 
-            <a href="">Pricing</a>
-            <a href="">Documentation</a>
+            <a href="second.html">Pricing</a>
+            <a href="third.html">Documentation</a>
             <a href="">Integration</a>
             <a href="">Features</a>
           </nav>
@@ -466,7 +478,7 @@ Base</p>
             <a href="">API Status</a>
             <a href="">Terms Of Service</a>
             <a href="">Privacy Poilicy</a>
-            <a href="">Case Study</a>
+            <a href="case.html">Case Study</a>
           </nav>
 </div>
 

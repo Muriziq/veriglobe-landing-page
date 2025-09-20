@@ -1,42 +1,14 @@
 
-    const header = document.querySelector("header")
-    const headerTimeline = gsap.timeline({defaults:{ease:"power.inOut",duration:0.7}})
-    headerTimeline.to(header,{opacity:1})
-    headerTimeline.fromTo(header.querySelector("img"),{opacity:0,x:-30},{opacity:1,x:0})
-    headerTimeline.fromTo(header.querySelectorAll("button"),{opacity:0,y:30},{opacity:1,y:0,stagger:0.2},"-=0.5")
-    headerTimeline.fromTo(header.querySelectorAll("a"),{opacity:0,y:30,x:30},{opacity:1,y:0,x:0,stagger:{each:0.1,from:"center"}},"-=0.5")
-
 function firstPage(){
-
-    const firstPageTimeline = gsap.timeline({defaults:{ease:"power.inOut",duration:0.7}})
-    const firstPage = document.querySelector(".first-article")
-    firstPageTimeline.fromTo(firstPage.querySelector("svg"),{opacity:0,width:0,height:0},{opacity:1,width:"100%",height:"100%"})
-firstPageTimeline.fromTo(firstPage.querySelectorAll("section > div, section > h1, section > p, section > button")
-,{opacity:0,y:30},{opacity:1,y:0,stagger:0.2},"-=0.5")
-
-
-const secondArticle = document.querySelector(".second-article")
-gsap.fromTo(secondArticle.querySelectorAll("div img"),{opacity:0,y:100},{opacity:1,y:0,duration:1,scrollTrigger:{trigger:secondArticle,start: "top 90%",end:"bottom top",toggleActions:"play none resume none"}})
-const secondArticleSec = secondArticle.querySelector("section")
-gsap.fromTo(secondArticleSec.querySelector("img"),{opacity:0,x:-100},{opacity:1,x:0,scrollTrigger:{trigger:secondArticleSec,start:"top 80%",end:"bottom top",toggleActions:"play none resume none"}})
-gsap.fromTo(secondArticleSec.querySelector("DIV"),{opacity:0,y:100},{opacity:1,y:0,scrollTrigger:{trigger:secondArticleSec,start:"top 80%",end:"bottom top",toggleActions:"play none resume none"}})
 
 gsap.fromTo(document.querySelectorAll(".third-article div"),{opacity:0,y:50},{opacity:1,y:0,ease:"power1.inOut",scrollTrigger:{trigger:document.querySelector(".third-article section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:0.5,stagger:0.2})
 const fourthArticleDivs = Array.from(document.querySelectorAll(".fourth-article > section > div"))
 gsap.fromTo(fourthArticleDivs[0],{opacity:0,x:-150},{opacity:1,x:0,scrollTrigger:{trigger:document.querySelector(".fourth-article > section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
 gsap.fromTo(fourthArticleDivs[1],{opacity:0,y:150},{opacity:1,y:0,scrollTrigger:{trigger:document.querySelector(".fourth-article > section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
 gsap.fromTo(fourthArticleDivs[2],{opacity:0,x:150},{opacity:1,x:0,scrollTrigger:{trigger:document.querySelector(".fourth-article > section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
-
-gsap.fromTo(document.querySelectorAll(".fifth-article h2,.fifth-article > div p"),{opacity:0,y:40},{opacity:1,y:0,stagger:0.2,scrollTrigger:{trigger:".fifth-article",start:"top 80%",end:"bottom top",toggleActions:"play none resume none"}})
-
 gsap.fromTo(".sixth",{opacity:0,y:100},{opacity:1,y:0,scrollTrigger:{trigger:document.querySelector(".sixth-article section"),start:"top 90%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
 gsap.fromTo(".sixth1",{opacity:0,x:100},{opacity:1,x:0,scrollTrigger:{trigger:document.querySelector(".sixth-article section"),start:"top 90%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
 }
-gsap.fromTo(".seventh-article",{opacity:0,y:100},{opacity:1,y:0,ease:"power2.inOut",scrollTrigger:{trigger:".seventh-article",toggleActions:"play none resume none",start:"top 80%"},duration:1})
-
-gsap.fromTo(document.querySelector("footer section"),{opacity:0,x:-100},{opacity:1,x:0,scrollTrigger:{trigger:document.querySelector("footer section"),start:"top 90%",toggleActions:"play none resume none"},duration:1})
-gsap.fromTo(document.querySelectorAll("footer nav"),{opacity:0,y:100},{opacity:1,y:0,scrollTrigger:{trigger:document.querySelector("footer section"),start:"top 90%",toggleActions:"play none resume none"},duration:1})
-
 function secondPage(){
 
     const range = document.querySelector('.third-article input[type="range"]');
@@ -59,38 +31,9 @@ function secondPage(){
     select.addEventListener("change",()=>reEvaluate(range.value))
     window.addEventListener("load",()=>{reEvaluate(range.value),updateBackground(range.value)})
     gsap.fromTo("path",{fill:"transparent"},{fill:"#ffffff",delay:1.5})
-    gsap.fromTo(document.querySelector(".first-article p"),{opacity:0,y:40},{opacity:1,y:0})
-    gsap.fromTo(document.querySelectorAll(".second-article h2,.second-article > div p"),{opacity:0,y:50},{opacity:1,y:0,stagger:0.2,delay:1})
-    const secondTimeline = gsap.timeline({scrollTrigger:{trigger:".second1",toggleActions:"play none resume none",start:"top 80%"}})
-    secondTimeline.fromTo(".second",{opacity:0,x:-100,y:100},{opacity:1,x:0,y:0,stagger:0.2})
-    secondTimeline.fromTo(".second1",{opacity:0,y:100},{opacity:1,y:0})
-    gsap.fromTo(document.querySelectorAll(".fourth-article  div"),{opacity:0,y:60},{opacity:1,y:0,stagger:0.2,scrollTrigger:{trigger:document.querySelector(".fourth-article section"),toggleActions:"play none resume none",start:"top 90%"}})
 }
 
 
-function caseStudy(){
-    gsap.fromTo("h1",{opacity:0,y:50},{opacity:1,y:0,duration:1})
-    const sections = Array.from(document.querySelectorAll(".second section"))
-    sections.forEach(section =>{
-        const divs = Array.from(section.querySelectorAll("div"))
-        const sectionTimeline = gsap.timeline({scrollTrigger:{trigger:section,toggleActions:"play none resume none",start:"top 90%"}})
-        sectionTimeline.fromTo(divs[0],{opacity:0,x:-40},{opacity:1,x:0,duration:1})
-        sectionTimeline.fromTo(divs[1],{opacity:0,x:40},{opacity:1,x:0,duration:1},"-=0.5")
-    })
-}
-function fourth(){
-    const firstTimeline = gsap.timeline()
-    firstTimeline.to(".first",{opacity:1})
-    firstTimeline.fromTo(document.querySelector(".first img"),{opacity:0,x:-50},{opacity:1,x:0})
-    firstTimeline.fromTo(document.querySelectorAll(".first div"),{y:50,opacity:0},{y:0,opacity:1,stagger:0.2})
-    document.querySelectorAll(".second,.third").forEach(second =>{
-        gsap.fromTo(second.querySelector("h3"),{opacity:0,y:40},{opacity:1,y:0,scrollTrigger:{trigger:second,toggleActions:"play none resume none",start:"top 90%"}})
-        gsap.fromTo(second.querySelectorAll("li"),{opacity:0,y:40},{opacity:1,y:0,scrollTrigger:{trigger:second.querySelector("ul"),toggleActions:"play none resume none",start:"top 90%"},stagger:0.2})
-    })
-
-    gsap.fromTo(document.querySelector(".fourth1"),{opacity:0,y:50},{opacity:1,y:0,ease:"power1.inOut",scrollTrigger:{trigger:document.querySelector(".fourth1"),start:"top 90%",end:"bottom top",toggleActions:"play none resume none"},duration:0.5})
-    gsap.fromTo(document.querySelectorAll(".fourth2 div"),{opacity:0,y:50},{opacity:1,y:0,ease:"power1.inOut",scrollTrigger:{trigger:document.querySelector(".fourth2"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:0.5,stagger:0.2})
-}
 function third(){
     const copyItem = document.querySelectorAll(".copyItem")
     const copy = document.querySelectorAll(".copy")
@@ -101,5 +44,22 @@ function third(){
             gsap.to(".copied",{opacity:0,delay:1})
         })
         .catch(err => console.log(err))
+    }))
+    const anchors = document.querySelectorAll("aside a")
+    anchors.forEach(anchor => anchor.addEventListener("click",(e)=>{
+        e.preventDefault()
+            const href = event.currentTarget.getAttribute('href');
+            if(href != "" || href!= null){
+                    const id = href.substring(1);
+
+    const target = document.getElementById(id);
+          const rect = target.getBoundingClientRect();
+      const offset = rect.top + window.scrollY - 150;
+
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+            }
     }))
 }
