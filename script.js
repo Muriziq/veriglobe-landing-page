@@ -1,13 +1,15 @@
 
 function firstPage(){
+document.querySelectorAll(".third-article div").forEach(div=>{
+gsap.fromTo(div,{opacity:0,y:50},{opacity:1,y:0,ease:"power1.inOut",scrollTrigger:{trigger:div,start:"top bottom",end:"bottom top",toggleActions:"play none resume none"},duration:0.5,stagger:0.2})
+})
 
-gsap.fromTo(document.querySelectorAll(".third-article div"),{opacity:0,y:50},{opacity:1,y:0,ease:"power1.inOut",scrollTrigger:{trigger:document.querySelector(".third-article section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:0.5,stagger:0.2})
 const fourthArticleDivs = Array.from(document.querySelectorAll(".fourth-article > section > div"))
-gsap.fromTo(fourthArticleDivs[0],{opacity:0,x:-150},{opacity:1,x:0,scrollTrigger:{trigger:document.querySelector(".fourth-article > section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
-gsap.fromTo(fourthArticleDivs[1],{opacity:0,y:150},{opacity:1,y:0,scrollTrigger:{trigger:document.querySelector(".fourth-article > section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
-gsap.fromTo(fourthArticleDivs[2],{opacity:0,x:150},{opacity:1,x:0,scrollTrigger:{trigger:document.querySelector(".fourth-article > section"),start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
-gsap.fromTo(".sixth",{opacity:0,y:100},{opacity:1,y:0,scrollTrigger:{trigger:document.querySelector(".sixth-article section"),start:"top 90%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
-gsap.fromTo(".sixth1",{opacity:0,x:100},{opacity:1,x:0,scrollTrigger:{trigger:document.querySelector(".sixth-article section"),start:"top 90%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
+gsap.fromTo(fourthArticleDivs[0],{opacity:0,x:-150},{opacity:1,x:0,scrollTrigger:{trigger:fourthArticleDivs[0],start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
+gsap.fromTo(fourthArticleDivs[1],{opacity:0,y:150},{opacity:1,y:0,scrollTrigger:{trigger:fourthArticleDivs[1],start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
+gsap.fromTo(fourthArticleDivs[2],{opacity:0,x:150},{opacity:1,x:0,scrollTrigger:{trigger:fourthArticleDivs[2],start:"top 80%",end:"bottom top",toggleActions:"play none resume none"},duration:1})
+gsap.fromTo(".sixth",{opacity:0,y:100},{opacity:1,y:0,scrollTrigger:{trigger:".sixth",start:"top bottom",end:"bottom top",toggleActions:"play none resume none"},duration:1})
+gsap.fromTo(".sixth1",{opacity:0,x:100},{opacity:1,x:0,scrollTrigger:{trigger:".sixth1",start:"top bottom",end:"bottom top",toggleActions:"play none resume none"},duration:1})
 }
 function secondPage(){
 

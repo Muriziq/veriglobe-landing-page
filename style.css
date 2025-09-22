@@ -72,6 +72,11 @@
     color: #071C49;
     font-size: 0.7rem;
     font-weight: 500;
+    transition: all 0.5s;
+}
+.first-article section :is(button:hover,button:active){
+    color:#E4E4E7 ;
+    background-color: #071C49;
 }
 
 .second-article{
@@ -164,6 +169,7 @@
     justify-content: space-between;
     flex-direction: column;
     color: #FFFFFF;
+    width: 100%;
 }
 .imageholder{
     width: 70px;
@@ -178,10 +184,17 @@
     height: 45%;
     object-fit: cover;
 }
+.third-article svg{
+width: 100%;
+height: auto;
+}
+.fourth-article svg{
+    height: 100%;
+    width: auto;
+}
 .third-article svg,.fourth-article svg{
     position: absolute;
-    height: auto;
-    width: 105%;
+
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -221,19 +234,21 @@
 .fourth-article section{
     display: grid;
     grid-template-columns: repeat(3,300px);
-    grid-auto-rows: 70vh;
+    grid-auto-rows: 480px;
     gap: 1.5rem;
     margin-top: 1.5rem;
 
 }
 .fourth-article section > div{
-        padding: 0.5rem 1rem;
+        padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: space-between;
     font-size: 0.9rem;
     font-weight: 400;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 .fourth-article h3{
     font-size: 1.5rem;
@@ -250,8 +265,8 @@
     align-items: center;
 }
 .fourth-article img{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
 
 }
@@ -261,6 +276,7 @@
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+    align-items: center;
     color: #71717B;
 
 }
@@ -371,17 +387,16 @@ th img{
     padding: 3rem 2rem 2rem;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    top: -15%;
+    transform: translateX(-50%);
     height: 335px;
     z-index: 1;
         font-size: 0.75rem;
     color: #FFFFFF;
     font-weight: 300;
 }
-.sixth::before{
-    background-image: url("./images/Rectangle\ 425\ \(2\).svg") ;
-    height: 140%;
+.sixth > img{
+    height: auto;
     width: 100%;
     position: absolute;
     background-size: cover;
@@ -396,19 +411,166 @@ th img{
 .sixth > p{
     width: 70%;
 }
-.sixth:nth-of-type(2)::before {
+.sixth:nth-of-type(2) > img {
   transform: scaleX(-1);
   transform-origin: center;
 }
-.sixth1::before{
-    background-image: url("./images/Rectangle\ 425\ \(1\).svg");
+.sixth1 > img{
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
     content: "";
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: auto;
     z-index: -1;
-    left: -30px;
-    top: -15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-width: 575.98px) { 
+    .first-article{
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    } 
+    .first-article::before,.first-article::after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .first-article section{
+        align-items: center;
+        text-align: center;
+        text-wrap: wrap;
+    }
+    .first-article h1{
+       text-align: center;
+       font-size: 3rem;
+    }
+    .first-article > div{
+        height: auto;
+        width: 100%;
+    }
+    .first-article button{
+        font-size: inherit;
+    }
+    .first-article svg{
+        width: 50%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .second-article{
+        padding-top: 4rem;
+    }
+    .second-article > div img:nth-child(4),
+    .second-article > div img:nth-child(5),
+    .second-article > div img:nth-child(6){
+        display: none;
+    }
+    .second-article > div{
+        height: auto;
+    }
+    .second-article > div img{
+        width: 30%;
+        height: auto;
+    }
+    .second-article > section{
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        align-items: center;
+    }
+    .second-article > section div{
+        justify-content: center;
+    }
+    .second-article >section img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .third-article{
+        align-items: center;
+                padding: 2rem 1rem;
+
+    }
+    .third-article >p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .third-article h2{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .third-article section{
+        grid-template-columns: 300px;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+     .fourth-article section{
+        grid-template-columns: 300px;
+        align-items: center;
+        gap: 1.5rem;
+        grid-auto-rows: 480px;
+        width: fit-content;
+     }
+    .fourth-article{
+        padding: 2rem 1rem;
+    }
+    .fourth-article > h2{
+        font-size: 2rem;
+    }
+    .fourth-article h2 span{
+        margin-left: 0.5rem;
+    }
+    .fifth-article{
+        padding: 2rem 1rem;
+        font-size: 1rem;
+    }
+    .fifth-article h2{
+        font-size: 1.7rem;
+    }
+    table{
+        table-layout: auto;
+    }
+    .table{
+        overflow-x: auto;
+        width: 100%;
+    }
+    th{
+        font-size: 1.2rem;
+        text-wrap: nowrap;
+    }
+    th img{
+        width: 200px;
+    }
+.sixth-article{
+    padding: 1rem;
+}
+.sixth-article section{
+    flex-direction: column;
+    gap: 130px;
+    place-content: center;
+}
+.sixth{
+    width: 270px;
+    height: 213px;
+    font-size: 0.5rem;
+    margin-left: auto;
+}
+.sixth1{
+    width: 300px;
+    height: 240px;
+    font-size: 0.5rem;
+            left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.sixth h3,.sixth1 h3{
+    font-size: 1rem;
+}
+
 }
