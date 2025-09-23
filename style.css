@@ -436,10 +436,6 @@ th img{
         justify-content: center;
         align-items: center;
     } 
-    .first-article::before,.first-article::after{
-        left: 50%;
-        transform: translateX(-50%);
-    }
     .first-article section{
         align-items: center;
         text-align: center;
