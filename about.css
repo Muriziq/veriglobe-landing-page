@@ -33,6 +33,7 @@ body {
   z-index: 2;
   padding: 5rem 3rem 2rem;
 }
+
 .second{
     display: flex;
     flex-direction: column;
@@ -53,7 +54,7 @@ body {
 .second-article::before,
 .second::before {
   content: "";
-  background-image: url("images/Rectangle 423 (2).svg");
+  background-image: url("images/Rectangle\ 423\ \(2\).svg");
   background-repeat: no-repeat;
   width: 100%;
   height: 70px;
@@ -75,8 +76,8 @@ body {
   box-shadow: 2px 2px 10px #000000;
   border: 1px solid #e4e4e7;
   border-radius: 1rem;
-  padding: 1.5rem;
-  height: 250px;
+  padding: 3rem 1.5rem;
+  height: auto;
 }
 .second1{
     display: flex;
@@ -84,11 +85,12 @@ body {
     align-items: start;
     color: #71717B;
     font-weight: 500;
-    justify-content: space-between;
+    gap: 1rem;
 }
 .second section > div > img{
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: contain;
 }
 .second1 h3{
     font-size: 1.5rem;
@@ -115,4 +117,35 @@ body {
 .second1 button img{
     height: 20px;
     width: auto;
+}
+
+@media (max-width: 767.98px){
+  .second-article,.second{
+    padding: 3rem 1rem;
+  }
+  .second-article > div{
+    width: 100%;
+  }
+  .second section{
+    flex-direction: column;
+  }
+  .second section > div > img{
+    height: 150px;
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  .second-article,.second{
+    padding: 3rem 1rem;
+  }
+  .second-article > div{
+    width: 80%;
+  }
+  .second section{
+    flex-direction: column;
+  }
+    .second section > div > img{
+    height: 150px;
+  }
 }

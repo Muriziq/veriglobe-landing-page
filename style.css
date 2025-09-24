@@ -5,7 +5,7 @@
     z-index: 1;
     display: flex;
     flex-direction: row;
-    padding: 3rem 10rem 2rem 4rem;
+    padding: 3rem;
     justify-content: space-between;
     align-items: center;
     height: 90vh;
@@ -428,36 +428,8 @@ th img{
     transform: translate(-50%,-50%);
 }
 
-@media (max-width: 575.98px) { 
-    .first-article{
-        flex-direction: column;
-        padding: 2rem 1rem;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-    } 
-    .first-article section{
-        align-items: center;
-        text-align: center;
-        text-wrap: wrap;
-    }
-    .first-article h1{
-       text-align: center;
-       font-size: 3rem;
-    }
-    .first-article > div{
-        height: auto;
-        width: 100%;
-    }
-    .first-article button{
-        font-size: inherit;
-    }
-    .first-article svg{
-        width: 50%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
+@media (max-width: 991.98px) { 
+ 
     .second-article{
         padding-top: 4rem;
     }
@@ -493,41 +465,33 @@ th img{
 
     }
     .third-article >p{
-        font-size: 1rem;
         text-align: center;
     }
     .third-article h2{
         text-align: center;
-        font-size: 1.7rem;
+
     }
     .third-article section{
-        grid-template-columns: 300px;
+
         align-items: center;
         gap: 0.5rem;
         margin-top: 0.5rem;
     }
      .fourth-article section{
-        grid-template-columns: 300px;
+
         align-items: center;
         gap: 1.5rem;
-        grid-auto-rows: 480px;
+  
         width: fit-content;
      }
     .fourth-article{
         padding: 2rem 1rem;
-    }
-    .fourth-article > h2{
-        font-size: 2rem;
     }
     .fourth-article h2 span{
         margin-left: 0.5rem;
     }
     .fifth-article{
         padding: 2rem 1rem;
-        font-size: 1rem;
-    }
-    .fifth-article h2{
-        font-size: 1.7rem;
     }
     table{
         table-layout: auto;
@@ -543,15 +507,84 @@ th img{
     th img{
         width: 200px;
     }
-.sixth-article{
-    padding: 1rem;
+
+
+    .third-article section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .fourth-article section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+                      align-items: center;
+        justify-content: center;
+    }
+    .fourth-article section > div,.third-article section > div{
+        width: 300px;
+    }
+    .third-article section > div{
+        height: 250px;
+    }
+    .fourth-article section > div{
+        height: 480px;
+    }
+       .third-article > p,.fifth-article{
+        font-size: 1rem;
+    }
+    .third-article h2, .fifth-article h2{
+        font-size: 1.7rem;
+    }
+    .fourth-article > h2{
+        font-size: 2rem;
+    }
+
 }
-.sixth-article section{
-    flex-direction: column;
+
+@media (max-width: 575.98px){
+       .first-article{
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    } 
+    .first-article section{
+        align-items: center;
+        text-align: center;
+        text-wrap: wrap;
+    }
+    .first-article h1{
+       text-align: center;
+
+    }
+    .first-article > div{
+        height: auto;
+        width: 100%;
+    }
+    .first-article button{
+        font-size: inherit;
+    }
+    .first-article svg{
+        width: 50%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .first-article h1{
+       font-size: 3rem;
+    }
+
+    .sixth-article section{
     gap: 130px;
-    place-content: center;
-}
-.sixth{
+    }
+    .sixth{
     width: 270px;
     height: 213px;
     font-size: 0.5rem;
@@ -565,8 +598,76 @@ th img{
     top: 50%;
     transform: translate(-50%,-50%);
 }
+    .sixth-article{
+    padding: 1rem;
+}
+.sixth-article section{
+    flex-direction: column;
+    place-content: center;
+}
 .sixth h3,.sixth1 h3{
     font-size: 1rem;
 }
+}
+@media (min-width: 576px) and (max-width: 767.98px){
+    .sixth-article section{
+        gap: 180px;
+    }
+    .sixth1{
+               left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);     
+    }
+       .first-article{
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    } 
+    .first-article section{
+        align-items: center;
+        text-align: center;
+        text-wrap: wrap;
+    }
+    .first-article h1{
+       text-align: center;
 
+    }
+    .first-article > div{
+        height: auto;
+        width: 100%;
+    }
+    .first-article button{
+        font-size: inherit;
+    }
+    .first-article svg{
+        width: 50%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .sixth-article{
+    padding: 1rem;
+}
+.sixth-article section{
+    flex-direction: column;
+    place-content: center;
+}
+.sixth h3,.sixth1 h3{
+    font-size: 1rem;
+}
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .first-article{
+        padding: 2rem;
+          height: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

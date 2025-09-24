@@ -178,7 +178,7 @@ h3{
     border-radius: 1rem;
     padding: 1rem;
 }
-.second > section ol,.third1 > section:last-child ul{
+.second > section > div:last-child ol,.third1 > section:last-child ul{
     padding-left: 1rem;
     font-weight: 300;
     display: flex;
@@ -211,8 +211,8 @@ h3{
 }
 .copy{
     position: absolute;
-    right: 70px;
-    top: 30px;
+    right: 10%;
+    top: 25%;
     background-color: transparent;
     border: none;
 }
@@ -441,7 +441,7 @@ background-color: #ffffff;
     color: #071C49;
     opacity: 0;
 }
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
     body > div{
         position: relative;
         grid-template-columns: 100px 1fr;
@@ -484,11 +484,11 @@ background-color: #ffffff;
         left: 1.5rem;
         transition: all 0.5s;
     }
-    aside  :is(.abutton:hover,.abutton:active)::before{
+    aside  :is(.abutton,.abutton)::before{
         transform: rotate(45deg);
         top: 0;
     }
-    aside :is(.abutton:hover,.abutton:active)::after{
+    aside :is(.abutton,.abutton)::after{
         transform: rotate(-45deg);
         top: 0;
     }
@@ -514,7 +514,10 @@ background-color: #ffffff;
         width: auto;
     }
     .first section{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: center;
         gap: 1.5rem;
     }
@@ -522,21 +525,25 @@ background-color: #ffffff;
         height: 100%;
         width: auto;
     }
+    .first1{
+        width: 300px;
+    }
     .second > section,.third1{
         grid-template-columns: 1fr;
 
     }
-    .dark{
+    .dark,.third1 .dark{
         padding: 2rem 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .dark > img{
-        height: 100%;
         width: auto;
+        height: 100%;
     }
-    .copy{
-        right: 10px;
-        top: 30px;
-    }
+
     .third3{
         width: 100%;
         margin: 0;
