@@ -64,4 +64,13 @@ function third(){
       });
             }
     }))
+    const secButton = document.querySelector("aside button")
+    const asideSec = document.querySelector("aside section")
+    let secWidth = false
+    secButton.addEventListener("click",()=>{
+        secWidth = !secWidth
+        secButton.classList.toggle("abutton")
+       asideSec.style.width = secWidth ? "200px" : "100px";
+       
+    })
 }

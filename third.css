@@ -468,7 +468,6 @@ background-color: #ffffff;
     aside a{
                 color: #ffffff;
                 padding-left: 1.5rem;
-                width: 200px;
     }
     aside :is(a:hover,a:active){
         border-color: #2B6767;
@@ -485,14 +484,11 @@ background-color: #ffffff;
         left: 1.5rem;
         transition: all 0.5s;
     }
-    aside > :is(section:hover,section:active){
-        width: auto;
-    }
-    aside  > :is(section:hover,section:active) button::before{
+    aside  :is(.abutton:hover,.abutton:active)::before{
         transform: rotate(45deg);
         top: 0;
     }
-    aside > :is(section:hover,section:active) button::after{
+    aside :is(.abutton:hover,.abutton:active)::after{
         transform: rotate(-45deg);
         top: 0;
     }
